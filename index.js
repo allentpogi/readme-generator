@@ -33,7 +33,7 @@ const questions = [
       type: 'list',
       name: 'license',
       message: 'Choose a license for your project:',
-      choices: ['Apache 2.0', 'BSD 3-Clause', 'GNU GPL v3', 'ISC', 'MIT'],
+      choices: ['Apache 2.0', 'GNU GPL v3', 'ISC', 'MIT'],
     },
     {
       type: 'input',
@@ -57,13 +57,68 @@ const questions = [
     },
 ];
 
+
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+const writeTofile = (readMetemplate) => {
+    fs.writeFile('README.md', readMetemplate, (err) =>
+        err ? console.error(err) : console.log('README.md generated!')
+    );
+};
+
 
 // TODO: Create a function to initialize app
-function init() {}
+
+function init() {
+    inquirer
+        .prompt(questions)
+        .then((answers) => {
+            const readMetemplate = `
+# ${answers.title}
+
+## Description
+
+${answers.description}
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Badges](#badges)
+- [Features](#features)
+- [Contributing](#contributing)
+- [Tests](#tests)
+
+## Installation
+${answers.installation}
+
+## Usage
+${answers.usage}
+
+## Credits
+${answers.credits}
+
+## License
+${answers.license}
+
+## Badges
+${answers.badges}
+
+## Features
+${answers.features}
+
+## Contributing
+${answers.contributing}
+
+## Tests
+${answers.tests}
+
+            `;
+
+            writeTofile(readMetemplate);
+
+        });
+};
 
 // Function call to initialize app
 init();
-
-

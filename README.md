@@ -1,9 +1,9 @@
 
-# Test
+# Week9 ReadMe generator
 
 ## Description
 
-test
+This is a program that will help user to generate a ReadME file. It uses node.js with inquirer package to ask questions to the user and save the answers into a ReadME file.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -16,27 +16,30 @@ test
 - [Tests](#tests)
 
 ## Installation
-test
+On the node.js command prompt, run the command npm install to install the inquirer package which is a dependency for the program.
 
 ## Usage
-test
+To run the program, go to the node.js command prompt and run the command "npm index.js"
+
+Screenshot below:
+![readme generator screenshot](./assets/screenshot.JPG)
 
 ## Credits
-test
+none
 
 ## License
-MIT
+n/a
 
 ## Badges
-test
+n/a
 
 ## Features
-test
+It generates a read me file.
 
 ## Contributing
 undefined
 
 ## Tests
-test
+n/a
 
             

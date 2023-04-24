@@ -24,6 +24,8 @@ To run the program, go to the node.js command prompt and run the command "npm in
 Screenshot below:
 ![readme generator screenshot](./assets/screenshot.JPG)
 
+You can visit this link to view the application in action: https://drive.google.com/file/d/1XSjEmW_ENE94CU1XsYABKbLFE5IuM-NC/view .
+
 ## Credits
 none
 

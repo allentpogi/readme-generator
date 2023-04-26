@@ -138,7 +138,7 @@ ${answers.license}
 ${answers.features}
 
 ## Contributing
-${answers.contributing}
+${answers.contribute}
 
 ## Tests
 ${answers.tests}

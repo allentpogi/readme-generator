@@ -1,8 +1,8 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
     {
       type: 'input',
@@ -22,7 +22,17 @@ const questions = [
     {
       type: 'input',
       name: 'usage',
-      message: 'Provide instructions and examples for use. Include screenshots as needed.',
+      message: 'Provide instructions and examples for use.',
+    },
+    {
+      type: 'input',
+      name: 'screenshot',
+      message: 'Do you want to add a screenshot? If yes, please provide the link to the screenshot:',
+    },
+    {
+      type: 'input',
+      name: 'video',
+      message: 'Do you want to add a video recording of your application in action? If yes, please provide the link to video recording:',
     },
     {
       type: 'input',
@@ -38,7 +48,7 @@ const questions = [
     {
       type: 'input',
       name: 'badges',
-      message: 'Include your badge, if any.',
+      message: 'Do you want to add a badge? If yes, please provide the link to the badge image:',
     },
     {
         type: 'input',
@@ -55,10 +65,20 @@ const questions = [
         name: 'tests',
         message: 'What are the test instructions for your project?',
     },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'What is your email address?',
+    },
+    {
+      type: 'input',
+      name: 'username',
+      message: 'What is your Github user name?',
+    },
 ];
 
 
-// TODO: Create a function to write README file
+// Function to write README file
 const writeTofile = (readMetemplate) => {
     fs.writeFile('README.md', readMetemplate, (err) =>
         err ? console.error(err) : console.log('README.md generated!')
@@ -66,7 +86,7 @@ const writeTofile = (readMetemplate) => {
 };
 
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 
 function init() {
     inquirer
@@ -82,18 +102,28 @@ ${answers.description}
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
+- [Screenshot](#screenshot)
+- [Video recording](#video-recording)
 - [Credits](#credits)
 - [License](#license)
 - [Badges](#badges)
 - [Features](#features)
 - [Contributing](#contributing)
 - [Tests](#tests)
+- [Email address](#email-address)
+- [Github username](#github-username)
 
 ## Installation
 ${answers.installation}
 
 ## Usage
 ${answers.usage}
+
+## Screenshot
+![screenshot](${answers.screenshot})
+
+## Video recording
+You can visit this link to view the application in action: ${answers.video}
 
 ## Credits
 ${answers.credits}
@@ -102,7 +132,7 @@ ${answers.credits}
 ${answers.license}
 
 ## Badges
-${answers.badges}
+![badge image](${answers.badges})
 
 ## Features
 ${answers.features}
@@ -113,12 +143,19 @@ ${answers.contributing}
 ## Tests
 ${answers.tests}
 
+## Email address
+${answers.email}
+
+## Github username
+${answers.username}
+
             `;
 
             writeTofile(readMetemplate);
 
         });
 };
+
 
 // Function call to initialize app
 init();

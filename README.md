@@ -1,47 +1,58 @@
 
-# Week9 ReadMe generator
+# test
 
 ## Description
 
-This is a program that will help user to generate a ReadME file. It uses node.js with inquirer package to ask questions to the user and save the answers into a ReadME file.
+test
 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
+- [Screenshot](#screenshot)
+- [Video recording](#video-recording)
 - [Credits](#credits)
 - [License](#license)
 - [Badges](#badges)
 - [Features](#features)
 - [Contributing](#contributing)
 - [Tests](#tests)
+- [Email address](#email-address)
+- [Github username](#github-username)
 
 ## Installation
-On the node.js command prompt, run the command npm install to install the inquirer package which is a dependency for the program.
+test
 
 ## Usage
-To run the program, go to the node.js command prompt and run the command "npm index.js"
+test
 
-Screenshot below:
-![readme generator screenshot](./assets/screenshot.JPG)
+## Screenshot
+![screenshot](./assets/screenshot.JPG)
 
-You can visit this link to view the application in action: https://drive.google.com/file/d/1XSjEmW_ENE94CU1XsYABKbLFE5IuM-NC/view .
+## Video recording
+You can visit this link to view the application in action: https://drive.google.com/file/d/1XSjEmW_ENE94CU1XsYABKbLFE5IuM-NC/view 
 
 ## Credits
-none
+
 
 ## License
-n/a
+GNU GPL v3
 
 ## Badges
-n/a
+![badge image](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=feature-1)
 
 ## Features
-It generates a read me file.
+n/a
 
 ## Contributing
 undefined
 
 ## Tests
 n/a
+
+## Email address
+test
+
+## Github username
+test
 
             
